@@ -22,10 +22,10 @@ function Navbar({ toggle }) {
                             <NavLinks to="discover">About</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="services">Projects</NavLinks>
+                            <NavLinks to="services">Skills</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="signup">Skills</NavLinks>
+                            <NavLinks to="signup">Projects</NavLinks>
                         </NavItem>
                     </NavMenu>
                     <NavBtn>
