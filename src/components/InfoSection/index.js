@@ -22,8 +22,8 @@ const InfoSection = ({img, lightBg, id, imgStart, topLine, lightText, headline, 
                                         spy={true}
                                         exact="true"
                                         offset={-80}
-                                        primary={primary ? 1 : 0}
-                                        dark={dark ? 1 : 0}
+                                        primary='true'
+                                        dark='true'
 
 
                                     >{buttonLabel}</Button>

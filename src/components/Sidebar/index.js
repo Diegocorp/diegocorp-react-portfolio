@@ -26,10 +26,10 @@ function Sidebar({ isOpen, toggle }) {
                         About
                     </SidebarLink>
                     <SidebarLink to="services" onClick={ toggle }>
-                        Projects
+                        Skills
                     </SidebarLink>
                     <SidebarLink to="signup" onClick={ toggle }>
-                        Skills
+                        Projects
                     </SidebarLink>
                 </SidebarMenu>
                 {/* <SideBtnWrap>

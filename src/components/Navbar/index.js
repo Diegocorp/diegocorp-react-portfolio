@@ -1,35 +1,50 @@
-import React from 'react'
-import { FaBars } from 'react-icons/fa';
-import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, 
-NavItem, NavLinks, NavBtn, NavBtnLink } from './NavbarElements'
-
+import React, {useState, useEffect} from 'react'
+import { FaBars, FaWindows } from 'react-icons/fa';
+import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink } from './NavbarElements'
+import {animateScroll as scroll} from 'react-scroll';
 
 function Navbar({ toggle }) {
+
+    const [scrollNav, setScrollNav] = useState(false);
+
+    const changeNav = () => {
+        if (window.scrollY <= 80) {
+            setScrollNav(false);
+        } else {
+            setScrollNav(true);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', changeNav);
+    }, []);
+
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    }
+
     return (
         <>
 
-            <Nav>
+            <Nav scrollNav={scrollNav}>
                 <NavbarContainer>
-                    <NavLogo to="/">Diego Sandoval </NavLogo>
+                    <NavLogo to="/" onClick={toggleHome}>Diego Sandoval </NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars/>
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="about">Home</NavLinks>
+                            <NavLinks to="about" smooth={true} duration={500} spy={true} exact='true' offset={-80}>About</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="discover">About</NavLinks>
+                            <NavLinks to="skills" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Skills</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="services">Skills</NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to="signup">Projects</NavLinks>
+                            <NavLinks to="projects" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Projects</NavLinks>
                         </NavItem>
                     </NavMenu>
                     <NavBtn>
-                        <NavBtnLink to="/signin">Sign in</NavBtnLink>
+                        <NavBtnLink to="/signin">Contact me</NavBtnLink>
                     </NavBtn>
             
                 </NavbarContainer>

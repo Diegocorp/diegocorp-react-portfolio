@@ -20,7 +20,7 @@ const HeroSection = () => {
             </HeroBg>
             <HeroContent>
                 <HeroH1>Diego Sandoval </HeroH1>
-                <HeroP>Full Stack developer</HeroP>
+                <HeroP>Full Stack Developer</HeroP>
                 <HeroBtnWrapper>
                     <Button 
                         to="signup" 
