@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import { homeObjOne, homeObjThree, homeObjTwo } from '../components/InfoSection/Data.js';
 import HeroSection from '../components/HeroSection';
 import InfoSection from '../components/InfoSection';
+import Services from '../components/Services';
 
 
 export const Home = () => {
@@ -19,6 +20,7 @@ export const Home = () => {
          <Navbar toggle={toggle} />   
          <HeroSection />
          <InfoSection {...homeObjOne} />
+         <Services/>
          <InfoSection {...homeObjTwo} />
          <InfoSection {...homeObjThree} />
         </>

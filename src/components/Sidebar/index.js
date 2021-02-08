@@ -22,17 +22,17 @@ function Sidebar({ isOpen, toggle }) {
                     <SidebarLink to="about" onClick={ toggle }>
                         Home
                     </SidebarLink>
-                    <SidebarLink to="discover" onClick={ toggle }>
+                    <SidebarLink to="about" onClick={ toggle }>
                         About
                     </SidebarLink>
                     <SidebarLink to="services" onClick={ toggle }>
-                        Skills
+                        Services
                     </SidebarLink>
-                    <SidebarLink to="signup" onClick={ toggle }>
+                    <SidebarLink to="proyects" onClick={ toggle }>
                         Projects
                     </SidebarLink>
                 </SidebarMenu>
-                {/* <SideBtnWrap>
+{/*                 <SideBtnWrap>
                     <SidebarRoute to="/signin"> Sign In </SidebarRoute>
                 </SideBtnWrap> */}
             </SidebarWrapper>
