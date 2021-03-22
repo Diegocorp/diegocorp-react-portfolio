@@ -35,7 +35,6 @@ export const Icon = styled.div`
     background: transparent;
     font-size: 2rem;
     cursor: pointer;
-    cursor: pointer;
     outline: none;
 `;
 
@@ -47,9 +46,9 @@ export const SidebarMenu = styled.ul`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 80px);
-    tetx-align: center;
+    text-align: center;
     position: relative;
-    top: 200px;
+/*     top: 200px; */
 
     @media screen and (max-width: 480px) {
         grid-template-rows: repeat(6, 60px);
@@ -83,7 +82,7 @@ export const SideBtnWrap = styled.div`
 
 export const SidebarRoute = styled(LinkR)`
     border-radius: 50px;
-    background: #01bf71;
+    background: #e62929;
     white-space: nowrap;
     padding: 16px 64px;
     color: #010606;
